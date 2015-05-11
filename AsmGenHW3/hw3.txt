@@ -11,12 +11,21 @@ the right version.  You can distinguish the two versions from one
 another in several ways.  The homework version, for example, includes
 this file (hw3.txt) as well as a sample output file, sample.s, and a
 simple runtime library, runtime.c, that is written in C.
-
+													
 NOTE: This version of the AsmGen materials can be compiled and executed
 on any machine with a suitable implementation of Java.  However, the
 generated assembly code files are intended to be compiled and executed
 on a Linux machine (specifically, on the machines in the Linuxlab).
 Other platforms, including both Mac OS and Windows, are NOT SUPPORTED.
+													~~~~~~~~~~~~~~~~~~~~~
+													SUMMARY
+													-Not quite the same as the Lab. close
+													-This ver contains sample out,& library
+													-java code works on all machines
+													-gen code only works on linuxlabs
+													~~~~~~~~~~~~~~~~~~~~~
+
+
 
 Warmup:
 -------
@@ -24,6 +33,12 @@ As in the Week 6 lab, the supplied code does not include implementations
 of the compilation schemes for unary minus (in ast/UMinus.java) or
 do...while loops (in ast/DoWhile.java).  Be sure that you know how to
 complete and test these examples before proceeding.
+													~~~~~~~~~~~~~~~~~~~~~
+													SUMMARY
+													-Complete lab examples first
+													~~~~~~~~~~~~~~~~~~~~~
+
+
 
 The version of AsmGen that is provided here eliminates the need for a
 special "print" instruction, and instead compiles a statement of the
@@ -59,6 +74,14 @@ referenced, and would also make it possible to switch, quickly, from the
 
 If you've read, completed, and understood all of the above, then you are
 ready to move on!
+
+													~~~~~~~~~~~~~~~~~~~~~
+													SUMMARY
+													-Contains a print statement
+													-Look in the runtime.c
+													-Takes assembly code from two lang
+													-
+													~~~~~~~~~~~~~~~~~~~~~
 
 
 Question 1: [15 points]
@@ -97,6 +120,12 @@ Your submission for this part of the assignment should be a carefully
 commented listing of your implementation [10 points] and a thoughtful
 description of the steps that you took to verify that your solution
 was working correctly [5 points].
+													~~~~~~~~~~~~~~~~~~~~~
+													SUMMARY
+													-For loops can contain all or none test
+													-look in class For
+													-Careful comments
+													-description of steps to verify correctness     												~~~~~~~~~~~~~~~~~~~~~
 
 Question 2: [15 points]
 -----------
@@ -155,6 +184,18 @@ Your submission for this part of the assignment should be a carefully
 commented listing of your implementation [10 points] and a thoughtful
 description of the steps that you took to verify that your solution was
 working correctly [5 points].
+													~~~~~~~~~~~~~~~~~~~~~
+													SUMMARY
+													-Implement Globals 
+													-Checkout the complie method in Defn.java
+													-And Compilefunction in Function.java
+													-All global functions and vars add X.
+													-use a.name("initFlobals") vs using
+													XinitGlobals
+													-Careful comments and verification
+													~~~~~~~~~~~~~~~~~~~~~
+
+
 
 Question 3: [20 points]
 -----------
@@ -196,6 +237,20 @@ and identify:
   code for sample.s, and show that you are able to improve on this
   machine generated code by making (and testing) small patches to fix
   those issues. [5 points]
+
+													~~~~~~~~~~~~~~~~~~~~~
+													SUMMARY
+													-Look at sample.prog
+													-recreate source code
+													-try using my finished target generator
+													-annotate sample.prog
+													-how did i find solution
+														-how could it be different
+														-3 examples of poor code quality
+														-patch these 
+													~~~~~~~~~~~~~~~~~~~~~
+
+
 
 [And if you're wondering how I might be able to grade this assignment
 without access to a copy of the original sample.prog: don't worry, I'm
