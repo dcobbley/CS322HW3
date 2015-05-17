@@ -91,6 +91,24 @@ public class For extends Stmt {
     public boolean compile(Assembly a, Frame f) {
         // Remember to allow for the possibility that
         // init, test, and step could each be null ...
-        throw new Error("compile not implemented for For");
+	  	if(init != null){
+			init.compileExpr(a,f);
+		}
+	  	String lab1 = a.newLabel(); //body of loop
+      	String lab2 = a.newLabel(); //test condition
+      	a.emit("jmp", lab2);
+      	a.emitLabel(lab1);
+		if(step != null){
+			step.compileExpr(a,f);
+		}
+      	body.compile(a, f);
+      	a.emitLabel(lab2);
+		if(test != null){
+      	test.branchTrue(a, f, lab1);
+		}
+		else{
+			a.emit("jmp", lab1);
+		}
+	  	return true; 
     }
 }
